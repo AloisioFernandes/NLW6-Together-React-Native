@@ -18,7 +18,7 @@ export function Profile() {
           </Text>
 
           <Text style={styles.username}>
-            Al
+            Aloísio
           </Text>
         </View>
 
