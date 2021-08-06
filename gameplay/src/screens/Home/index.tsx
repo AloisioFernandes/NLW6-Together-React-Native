@@ -48,6 +48,10 @@ export function Home() {
     navigation.navigate('AppointmentDetails')
   }
 
+  function handleAppointmentCreate() {
+    navigation.navigate('AppointmentCreate')
+  }
+
   function handleCategorySelect(categoryId: string) {
     categoryId === category ? setCategory('') : setCategory(categoryId)
   }
@@ -56,7 +60,7 @@ export function Home() {
     <Background>
       <View style={styles.header}>
         <Profile />
-        <ButtonAdd />
+        <ButtonAdd onPress={handleAppointmentCreate} />
       </View>
 
       <CategorySelect 

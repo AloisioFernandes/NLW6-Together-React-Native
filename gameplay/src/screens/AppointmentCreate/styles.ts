@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-import { getBottomSpace } from "react-native-iphone-x-helper";
 import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
@@ -7,39 +6,39 @@ export const styles = StyleSheet.create({
     flex: 1
   },
 
-  banner: {
-    width: '100%',
-    height: 234,
-    marginBottom: 30
-  },
-
-  bannerContent: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    paddingHorizontal: 24,
-    marginBottom: 30
-  },
-
-  title: {
-    fontSize: 28,
+  label: {
+    fontSize: 18,
     fontFamily: theme.fonts.title700,
     color: theme.colors.heading
   },
 
-  subtitle: {
-    fontSize: 13,
-    fontFamily: theme.fonts.text400,
-    color: theme.colors.heading
-  },
-
-  members: {
-    marginLeft: 24,
-    marginTop: 27
-  },
-
-  footer: {
+  form: {
     paddingHorizontal: 24,
-    paddingVertical: 20,
-    marginBottom: getBottomSpace()
+    marginTop: 32
+  },
+
+  select: {
+    flexDirection: 'row',
+    width: '100%',
+    height: 68,
+    borderColor: theme.colors.secondary50,
+    borderWidth: 1,
+    borderRadius: 8,
+    alignItems: 'center',
+    paddingRight: 25,
+    overflow: 'hidden'
+  },
+
+  selectBody: {
+    flex: 1,
+    alignItems: 'center'
+  },
+
+  image: {
+    width: 64,
+    height: 68,
+    backgroundColor: theme.colors.secondary50,
+    borderWidth: 1,
+    borderRadius: 8
   }
 })
