@@ -17,6 +17,12 @@ export function Guilds({ handleGuildSelect }: Props) {
       name: 'Lendários',
       icon: 'image.png',
       owner: true
+    },
+    {
+      id: '2',
+      name: 'Clube do CS',
+      icon: 'image.png',
+      owner: true
     }
   ]
 
