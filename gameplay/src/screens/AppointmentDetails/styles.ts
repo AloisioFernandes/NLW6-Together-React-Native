@@ -9,8 +9,7 @@ export const styles = StyleSheet.create({
 
   banner: {
     width: '100%',
-    height: 234,
-    marginBottom: 30
+    height: 234
   },
 
   bannerContent: {
