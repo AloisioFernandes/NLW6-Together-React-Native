@@ -2,9 +2,9 @@ import React from 'react';
 import { 
   View,
   Text,
-  Image
+  Image,
+  Alert
 } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 
 import { useAuth } from '../../hooks/auth';
 
@@ -15,12 +15,14 @@ import { Background } from '../../components/Background';
 import { styles } from './styles'
 
 export function SignIn() {
-  const navigation = useNavigation()
+  const { user, signIn } = useAuth()
 
-  const { user } = useAuth()
-
-  function handleSignIn() {
-    navigation.navigate('Home')
+  async function handleSignIn() {
+    try {
+      await signIn()
+    } catch(error) {
+      Alert.alert(error)
+    }
   }
 
   return (
