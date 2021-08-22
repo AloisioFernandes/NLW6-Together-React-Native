@@ -51,3 +51,5 @@ export function Guilds({ handleGuildSelect }: Props) {
     </View>
   )
 }
+
+// 54:30
