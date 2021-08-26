@@ -23,8 +23,8 @@ export function Home() {
 
   const navigation = useNavigation()
 
-  function handleAppointmentDetails() {
-    navigation.navigate('AppointmentDetails')
+  function handleAppointmentDetails(guildSelected: AppointmentProps) {
+    navigation.navigate('AppointmentDetails', { guildSelected })
   }
 
   function handleAppointmentCreate() {
@@ -78,7 +78,7 @@ export function Home() {
             renderItem={({ item }) => (
               <Appointment 
                 data={item} 
-                onPress={handleAppointmentDetails}
+                onPress={() => handleAppointmentDetails(item)}
               />           
             )}
             style={styles.matches}
